@@ -1,7 +1,11 @@
 {% extends 'core/base.html' %}
 {% block title %}Portafolio{% endblock %}
+{% load static %}
 
-{% block background %}{% load static %}{{ portfolio_image.url }}{% endblock %}
+<!-- Debe ir asi en una sola linea porque osino en el front se produce un salto de
+linea y no se muestra la imagen-->
+{% block background %}{% if portfolio_image.url %}{{ portfolio_image.url }}{% else %}{% static 'core/img/portfolio-bg.jpg' %}{% endif %}{% endblock background %}
+
 {% block header %}
   <h1>Portafolio</h1>
   <span class="subheading">Currículo</span>
