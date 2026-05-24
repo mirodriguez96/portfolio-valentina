@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+{% block header %}
+    <h1>Portafolio</h1>
+    <span class="subheading">Currículo</span>
+{% endblock header %}
+
+{% block content %}
+        <!-- Proyecto -->
+        <div class="row project">
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{% static 'core/img/setup.jpg' %}" alt="" />
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">Setup</h2>
+                <p>Asi es como planeo construir mi setup</p>
+                <p><a href="http://google.com">Más información</a></p>
+            </div>
+        </div>
+        <!-- Proyecto -->
+        <div class="row project">
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{% static 'core/img/room.jpg' %}" alt="" />
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">Habitacion</h2>
+                <p>Asi es como planeo modificar mi habitacion</p>
+                <p><a href="http://google.com">Más información</a></p>
+            </div>
+        </div>
+        <!-- Proyecto -->
+        <div class="row project">
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{% static 'core/img/car.jpg' %}" alt="" />
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">Mi carro y moto</h2>
+                <p>El carro y la moto que planeo tener</p>
+                <p><a href="http://google.com">Más información</a></p>
+            </div>
+        </div>
+{% endblock %}
