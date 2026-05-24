@@ -26,7 +26,6 @@ urlpatterns = [
     path("about/", coreViews.about, name="about"),
     path("portfolio/", portfolioViews.portfolio, name="portfolio"),
     path("contact/", coreViews.contact, name="contact"),
-    path("goals/", coreViews.goals, name="goals"),
     path("admin/", admin.site.urls),
 ]
 

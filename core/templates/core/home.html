@@ -1,9 +1,12 @@
 {% extends 'core/base.html' %}
 {% block title %}Portada{% endblock %}
+{% load static %}
 
-{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+<!-- Debe ir asi en una sola linea porque osino en el front se produce un salto de
+linea y no se muestra la imagen-->
+{% block background %}{% if home_image.url %}{{ home_image.url }}{% else %}{% static 'core/img/home-bg.jpg' %}{% endif %}{% endblock background %}
 
 {% block header %}
-    <h1>Miguel Rodriguez</h1>
-    <span class="subheading">Ingeniero de Sistemas</span>
+  <h1>{{my_name}}</h1>
+  <span class="subheading">{{my_occupation}}</span>
 {% endblock header %}

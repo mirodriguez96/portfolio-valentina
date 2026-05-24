@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # MY APPS
+    "background.apps.BackgroundConfig",
     "core",
+    "myprofile.apps.MyprofileConfig",
     "portfolio.apps.PortfolioConfig",
+    "social.apps.SocialConfig",
 ]
 
 MIDDLEWARE = [
@@ -63,6 +67,9 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "myprofile.processors.ctx_dict",
+                "background.processors.ctx_dict",
+                "social.processors.ctx_dict",
             ],
         },
     },

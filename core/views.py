@@ -11,7 +11,3 @@ def about(request):
 
 def contact(request):
     return render(request, "core/contact.html")
-
-
-def goals(request):
-    return render(request, "core/goals.html")
